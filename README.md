@@ -52,4 +52,4 @@ Use Principal Component Analysis (PCA) to reduce the dimensions of the dataset f
 15.	Visualise Clusters with PCA
 Create a scatter plot using ggplot2 to visualise the clusters in a reduced 2D space (PC1 and PC2) with different colours representing different clusters to show the separation of clusters in reduced dimensions.
 
-![image](https://github.com/user-attachments/assets/ebb0f771-0441-48cf-9211-cd999e75022d)
+
