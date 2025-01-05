@@ -1,5 +1,6 @@
-### the-INF6027-project-page-
+### The INF6027 Project
 
+## Overview
 This project analyses data from the City of York Council to explore ways to enhance digital platforms and improve public engagement. By focusing on user age groups, the study aims to develop effective strategies for increasing online service adoption and leveraging user feedback to improve service delivery and engagement.
 
 
@@ -7,6 +8,7 @@ This project analyses data from the City of York Council to explore ways to enha
 1.	What is the most popular method that citizens prefer to use to contact or receive services from the city council?
 2.	What age group characteristics of users should be considered as a main target group for promoting the council’s online service?
 3.	How can the council create strategies for its digital services to better meet user needs?
+
 
 ## Key Findings
 1.	Key Finding 1: Online access is the most popular method, especially for Clusters 2 and 3.
