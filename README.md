@@ -3,19 +3,19 @@
 This project analyses data from the City of York Council to explore ways to enhance digital platforms and improve public engagement. By focusing on user age groups, the study aims to develop effective strategies for increasing online service adoption and leveraging user feedback to improve service delivery and engagement.
 
 
-##Research Questions
+## Research Questions
 1.	What is the most popular method that citizens prefer to use to contact or receive services from the city council?
 2.	What age group characteristics of users should be considered as a main target group for promoting the council’s online service?
 3.	How can the council create strategies for its digital services to better meet user needs?
 
-##Key Findings
+## Key Findings
 1.	Key Finding 1: Online access is the most popular method, especially for Clusters 2 and 3.
 2.	Key finding 2 - Cluster 1 prefers traditional methods over online access and shows minimal engagement in online activities.
 3.	Key finding 3 - Unique strategies are essential to address the needs of each cluster, including improving digital platforms for Clusters 2 and 3 and educating Cluster 1 about online services.
 4.	Key finding 4 - Investment in digital service features like seamless navigation, payment gateways, and issue-reporting tools is critical to meeting user expectations, particularly for Clusters 2 and 3.
 
 
-##Steps to Run the Code for Building the Clustering Model
+## Steps to Run the Code for Building the Clustering Model
 
 1.	Install Necessary Packages
 Install the required R packages (readxl, dplyr, factoextra, ggplot2) to handle data processing, clustering, and visualisation. This ensures that all functions used in the code are available.
