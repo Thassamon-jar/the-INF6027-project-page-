@@ -12,9 +12,12 @@ This project analyses data from the City of York Council to explore ways to enha
 
 ## Key Findings
 1.	Key Finding 1: Online access is the most popular method, especially for Clusters 2 and 3.
-2.	Key finding 2 - Cluster 1 prefers traditional methods over online access and shows minimal engagement in online activities.
-3.	Key finding 3 - Unique strategies are essential to address the needs of each cluster, including improving digital platforms for Clusters 2 and 3 and educating Cluster 1 about online services.
-4.	Key finding 4 - Investment in digital service features like seamless navigation, payment gateways, and issue-reporting tools is critical to meeting user expectations, particularly for Clusters 2 and 3.
+2.	Key finding 2: Cluster 3 is the primary target group due to their high engagement in activities like information searching, issue reporting, service requests, and payments, reflecting their heavy reliance on online access and active participation.
+3.	Key finding 3:
+    Cluster 1: Raise awareness and highlight the benefits of online services to encourage digital adoption.
+    Cluster 2: Enhance online service efficiency and convenience, focusing on features like improved UX/UI, payment gateways, and encouraging use of additional activities such as payments or feedback.
+    Cluster 3: Prioritize accessibility and support for comments and issue reporting, leveraging their feedback to improve services and maintain engagement by showing their voices are valued.
+
 
 
 ## Steps to Run the Code for Building the Clustering Model
