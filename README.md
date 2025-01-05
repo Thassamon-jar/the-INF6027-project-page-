@@ -22,6 +22,9 @@ This project analyses data from the City of York Council to explore ways to enha
 
 ## Steps to Run the Code for Building the Clustering Model
 
+Download the cleaning_opendatarelease.xlsx file before running the code.
+
+
 1.	Install Necessary Packages
 Install the required R packages (readxl, dplyr, factoextra, ggplot2) to handle data processing, clustering, and visualisation. This ensures that all functions used in the code are available.
 
