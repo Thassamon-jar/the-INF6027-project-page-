@@ -11,6 +11,9 @@ This project analyses data from the City of York Council to explore ways to enha
 
 
 ## Key Findings
+
+<img src="./PCA Cluster Scatter Plot.png" width="100%" height="100%">
+
 1.	Key Finding 1: Online access is the most popular method, especially for Clusters 2 and 3.
 2.	Key finding 2: Cluster 3 is the primary target group due to their high engagement in activities like information searching, issue reporting, service requests, and payments, reflecting their heavy reliance on online access and active participation.
 3.	Key finding 3:
