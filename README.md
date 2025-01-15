@@ -5,9 +5,9 @@ This project analyses data from the City of York Council to explore ways to enha
 
 
 ## Research Questions
-1.	What is the most popular method that citizens prefer to use to contact or receive services from the city council?
-2.	What age group characteristics of users should be considered as a main target group for promoting the council’s online service?
-3.	How can the council create strategies for its digital services to better meet user needs?
+RQ1: What is the most popular method that citizens prefer to use to access services?
+RQ2: What age group of users should be considered as a main target for promoting the council’s online service?
+RQ3: What should be strategies that the council plan for an online service to build engagement from users?
 
 
 ## Key Findings
@@ -69,6 +69,7 @@ Clustering was performed using the k-means algorithm, a partitioning technique t
   - data_scaled: The standardised dataset.
   - centers = 3: Specifies the number of clusters (k).
   - nstart = 25: Runs the algorithm with 25 random initialisations for robustness. Assign the resulting cluster labels to a new column (Cluster) in the data_features dataset.
+    
 13.	Cluster Analysis
 Summarise the characteristics of each cluster by calculating the mean of all variables for each cluster using group_by() and summarise(). Save the summary in cluster_summary which Provides the mean values of each feature for every cluster.
 
