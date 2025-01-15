@@ -21,6 +21,13 @@ This project analyses data from the City of York Council to explore ways to enha
     Cluster 2: Enhance online service efficiency and convenience, focusing on features like improved UX/UI, payment gateways, and encouraging use of additional activities such as payments or feedback.
     Cluster 3: Prioritize accessibility and support for comments and issue reporting, leveraging their feedback to improve services and maintain engagement by showing their voices are valued.
 
+## Visualizations to Provide Insights
+<img src="./PCA Cluster Scatter Plot.png" width="100%" height="100%">
+
+A bar chart illustrates that Clusters 2 and 3 exhibit a preference for online access. While Cluster 1 exhibits a preference for conventional access channels, such as in-person interactions and telephone communication, so highlighting the necessity of ensuring inclusivity.
+
+<img src="./PCA Cluster Scatter Plot.png" width="100%" height="100%">
+Cluster 1 exhibits minimal interest in the available services. In contrast, Clusters 2 and 3 demonstrate greater levels of engagement, with Cluster 3 standing out as highly engaged users who actively utilise the services.
 
 
 ## Steps to Run the Code for Building the Clustering Model
