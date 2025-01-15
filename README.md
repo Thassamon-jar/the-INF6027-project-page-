@@ -7,7 +7,7 @@ This project analyses data from the City of York Council to explore ways to enha
 ## Research Questions
 1. What is the most popular method that citizens prefer to use to access services?
 2. What age group of users should be considered as a main target for promoting the council’s online service?
-3. What should be strategies that the council plan for an online service to build engagement from users?
+3. What strategies should the council plan for an online service to build engagement from users?
 
 
 ## Key Findings
