@@ -28,7 +28,7 @@ RQ3: Which user group is the primary target that uses online services the most a
 
 
 ## Visualizations to Provide Insights
-<img src="./Access Method by Cluster_Bar Chart.png" width="100%" height="100%">
+<img src="./Rplot02.png" width="100%" height="100%">
 
 A bar chart illustrates the p-values of demographic predictors, with the red dashed line marking the significance threshold (0.05).
 
