@@ -17,9 +17,13 @@ RQ3: Which user group is the primary target that uses online services the most a
 <img src="./PCA Cluster Scatter Plot.png" width="100%" height="100%">
 
 1.The age group has no significant effect on online service access.
+
 2.Males are significantly more likely to access online services than females.
+
 3.Married and single individuals have higher odds of online service use than the reference group.
+
 4.The model shows strong predictive ability, with 89% accuracy.
+
 5.Odds ratio analysis highlights demographic differences in engagement, informing digital inclusion policies.
 
 
