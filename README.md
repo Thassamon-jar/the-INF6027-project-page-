@@ -56,17 +56,17 @@ A bar chart illustrates the odds ratios of key demographic groups with higher en
 Download the cleaning_opendatarelease.xlsx file before running the code.
 
 
-#1.Installing and Loading Packages
+# 1.Installing and Loading Packages
 
 Required packages: readxl, dplyr, caret, lattice for data import, preprocessing, and modelling.
 
 
-#2.Importing the Dataset
+# 2.Importing the Dataset
 
 Used read_excel() to import survey data on online service access patterns.
 
 
-#3.Data Cleaning
+# 3.Data Cleaning
 
 Handled optional survey responses that resulted in blanks.
 Re-coded Access_Online into binary values:
@@ -74,30 +74,30 @@ Re-coded Access_Online into binary values:
 0 = No (No Online Access)
 
 
-#4.Data Transformation
+# 4.Data Transformation
 
 Converted categorical variables (Access_Online, Gender, Age_Group, Marital_Status) into factors to ensure compatibility with logistic regression.
 
 
-#5.Training and Testing Split
+# 5.Training and Testing Split
 
 Split dataset into:
 70% training set (for model fitting)
 30% testing set (for performance evaluation)
 
 
-#6.Model Training
+# 6.Model Training
 
 Applied logistic regression using glm() to predict online access based on demographic factors.
 Used the logit link function to transform probabilities into log-odds.
 
 
-#7.Model Specification
+# 7.Model Specification
 
 The logistic regression model in this study examines how demographic factors, including age group, gender, and marital status, influence the likelihood of accessing online services. The model estimates the probability that an individual has online access based on these characteristics. Each demographic factor is assigned a coefficient, which reflects the strength and direction of its relationship with online access. By analysing these coefficients, the model provides valuable insights into which groups are more or less likely to engage with online services, helping inform policies to promote digital inclusion.
 
 
-#8.Model Parameters
+# 8.Model Parameters
 
 Regression type: Binomial logistic regression (binary outcome: Yes/No).
 Estimation method: Fisher Scoring Algorithm (default in glm()).
@@ -106,7 +106,7 @@ Probability ≥ 0.5 = Online User (1)
 Probability < 0.5 = Non-Online User (0)
 
 
-#9.Model Evaluation
+# 9.Model Evaluation
 
 Accuracy was the main metric to assess how well the model’s predictions matched actual data in the test set.
 Higher accuracy indicates better performance, supporting the model’s use in policy development for digital service adoption.
