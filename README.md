@@ -15,15 +15,15 @@ RQ3: Which user group is the primary target that uses online services the most a
 
 ## Key Findings
 
-1.The age group has no significant effect on online service access.
+1. The age group has no significant effect on online service access.
 
-2.Males are significantly more likely to access online services than females.
+2. Males are significantly more likely to access online services than females.
 
-3.Married and single individuals have higher odds of online service use than the reference group.
+3. Married and single individuals have higher odds of online service use than the reference group.
 
-4.The model shows strong predictive ability, with 89% accuracy.
+4. The model shows strong predictive ability, with 89% accuracy.
 
-5.Odds ratio analysis highlights demographic differences in engagement, informing digital inclusion policies.
+5. Odds ratio analysis highlights demographic differences in engagement, informing digital inclusion policies.
 
 
 
@@ -32,13 +32,13 @@ RQ3: Which user group is the primary target that uses online services the most a
 
 A bar chart illustrates the p-values of demographic predictors, with the red dashed line marking the significance threshold (0.05).
 
-•	Age Group 
+#### Age Group 
 The figure demonstrates that all age group predictors exceed the 0.05 threshold, confirming that age does not significantly influence online service adoption. 
 
-•	Gender
+#### Gender
 The figure highlights Gender (Male) as a statistically significant predictor (P = 0.02), as indicated by the bar falling to the left of the red significance threshold. This aligns with the findings that males are 7.3 times more likely to use online services than females.
 
-•	Marital Status
+#### Marital Status
 The significance of Married (P = 0.04), Single (P = 0.05), and Prefer not to say (P = 0.04) categories is evident in the figure, as these variables have bars that fall within the significance threshold. This reinforces the conclusion that marital status plays a crucial role in predicting online service usage, with single and married individuals showing the highest likelihood of engagement.
 These findings suggest that gender and marital status play a crucial role in determining online service usage, while age differences are not a major factor.
 
