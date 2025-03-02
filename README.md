@@ -5,29 +5,40 @@ This project analyses data from the City of York Council to explore ways to enha
 
 
 ## Research Questions
-1. What is the most popular method that citizens prefer to use to access services?
-2. What age group of users should be considered as a main target for promoting the council’s online service?
-3. What strategies should the council plan for an online service to build engagement from users?
+RQ1: How do demographic factors influence the probability of using online services?
+RQ2: How accurately can a logistic regression model predict users' probability of online service adoption based on these demographic factors?
+RQ3: Which user group is the primary target that uses online services the most and should be prioritised for promoting online services to maximise adoption rates?
 
 
 ## Key Findings
 
 <img src="./PCA Cluster Scatter Plot.png" width="100%" height="100%">
 
-1.	Key Finding 1: Online access is the most popular method, especially for Clusters 2 and 3.
-2.	Key finding 2: Cluster 3 is the primary target group due to their high engagement in activities like information searching, issue reporting, service requests, and payments, reflecting their heavy reliance on online access and active participation.
-3.	Key finding 3:
-    Cluster 1: Raise awareness and highlight the benefits of online services to encourage digital adoption.
-    Cluster 2: Enhance online service efficiency and convenience, focusing on features like improved UX/UI, payment gateways, and encouraging use of additional activities such as payments or feedback.
-    Cluster 3: Prioritize accessibility and support for comments and issue reporting, leveraging their feedback to improve services and maintain engagement by showing their voices are valued.
+•	The age group has no significant effect on online service access.
+•	Males are significantly more likely to access online services than females.
+•	Married and single individuals have higher odds of online service use than the reference group.
+•	The model shows strong predictive ability, with 89% accuracy.
+•	Odds ratio analysis highlights demographic differences in engagement, informing digital inclusion policies.
+
+
 
 ## Visualizations to Provide Insights
 <img src="./Access Method by Cluster_Bar Chart.png" width="100%" height="100%">
 
-A bar chart illustrates that Clusters 2 and 3 exhibit a preference for online access. While Cluster 1 exhibits a preference for conventional access channels, such as in-person interactions and telephone communication, so highlighting the necessity of ensuring inclusivity.
+A bar chart illustrates the p-values of demographic predictors, with the red dashed line marking the significance threshold (0.05).
+•	Age Group 
+The figure demonstrates that all age group predictors exceed the 0.05 threshold, confirming that age does not significantly influence online service adoption. 
+•	Gender
+The figure highlights Gender (Male) as a statistically significant predictor (P = 0.02), as indicated by the bar falling to the left of the red significance threshold. This aligns with the findings that males are 7.3 times more likely to use online services than females.
+•	Marital Status
+The significance of Married (P = 0.04), Single (P = 0.05), and Prefer not to say (P = 0.04) categories is evident in the figure, as these variables have bars that fall within the significance threshold. This reinforces the conclusion that marital status plays a crucial role in predicting online service usage, with single and married individuals showing the highest likelihood of engagement.
+These findings suggest that gender and marital status play a crucial role in determining online service usage, while age differences are not a major factor.
+
+
 
 <img src="./Clustered Activities_Bar Chart.png" width="100%" height="100%">
-Cluster 1 exhibits minimal interest in the available services. In contrast, Clusters 2 and 3 demonstrate greater levels of engagement, with Cluster 3 standing out as highly engaged users who actively utilise the services.
+A bar chart illustrates the odds ratios of key demographic groups with higher engagement in digital services.
+
 
 
 ## Steps to Run the Code for Building the Clustering Model
@@ -35,55 +46,44 @@ Cluster 1 exhibits minimal interest in the available services. In contrast, Clus
 Download the cleaning_opendatarelease.xlsx file before running the code.
 
 
-1.	Install Necessary Packages
-Install the required R packages (readxl, dplyr, factoextra, ggplot2) to handle data processing, clustering, and visualisation. This ensures that all functions used in the code are available.
+1.Installing and Loading Packages
+Required packages: readxl, dplyr, caret, lattice for data import, preprocessing, and modelling.
 
-2.	Load Libraries
-Load the libraries into the R session to enable their functionality:
-  - readxl: For reading Excel files.
-  - dplyr: For data manipulation.
-  - factoextra: For clustering evaluation and visualisation.
-  - ggplot2: For creating plots.
-3.	Import the Dataset
-Read the Excel file using the read_excel() function and store it in the data variable. Adjust the file_path to the actual location of your file.
+2.Importing the Dataset
+Used read_excel() to import survey data on online service access patterns.
 
-4.	Inspect the Data
-Use str(data) and head(data) to check the structure and preview the first few rows of the dataset to understand its format and content.
+3.Data Cleaning
+Handled optional survey responses that resulted in blanks.
+Re-coded Access_Online into binary values:
+1 = Yes (Online Access)
+0 = No (No Online Access)
 
-5.	Select Columns for Clustering
-Define the variables to be used for clustering by creating a list of column names in columns_for_clustering. Extract these columns from the dataset and store them in data_features.
+4.Data Transformation
+Converted categorical variables (Access_Online, Gender, Age_Group, Marital_Status) into factors to ensure compatibility with logistic regression.
 
-6.	Handle Missing Data
-Replace missing values (NA) with 0 in data_features using is.na() and assignment.
+5.Training and Testing Split
+Split dataset into:
+70% training set (for model fitting)
+30% testing set (for performance evaluation)
 
-7.	Transform Categorical Data
-Convert 'YES' and 'NO' in columns starting with "Access" and "Activity" into numerical values (1 for 'YES' and 0 for 'NO') using mutate() and ifelse().
+Model Training
+Applied logistic regression using glm() to predict online access based on demographic factors.
+Used the logit link function to transform probabilities into log-odds.
 
-8.	Convert Age Groups to Numeric Values
-Transform the Age_Group variable into numeric values corresponding to specific age ranges using mutate() and case_when().
+7.Model Specification
+Logistic regression equation:
+Y = \log\left(\frac{p}{1-p}\right) = \beta_0 + \beta_1(\text{Age_Group}) + \beta_2(\text{Gender}) + \beta_3(\text{Marital_Status}) + \epsilon
+This estimates the influence of age group, gender, and marital status on online service access.
 
-9.	Data Summary
-Use summary(data_features) to verify that the data cleaning and transformations have been applied correctly.
+8.Model Parameters
+Regression type: Binomial logistic regression (binary outcome: Yes/No).
+Estimation method: Fisher Scoring Algorithm (default in glm()).
+Classification threshold:
+Probability ≥ 0.5 = Online User (1)
+Probability < 0.5 = Non-Online User (0)
 
-10.	Data Scaling
-To standardise the dataset and ensure comparability across features, continuous variables were scaled using the scale() function by scaling them to have a mean of 0 and a standard deviation of 1 using scale(data_features). This step prevents variables with larger scales, such as age groups, from dominating the clustering process.
-
-11.	Determine Optimal Number of Clusters
-To identify the optimal number of clusters, the Elbow Method was applied using the fviz_nbclust() function (Kassambara, 2017). Use the fviz_nbclust() function with the "Elbow Method" to evaluate the within-cluster sum of squares for different numbers of clusters. Identify the "elbow point" in the plot to determine the optimal number of clusters (k). Elbow Method Plot visualises the optimal number of clusters. 
-
-12.	Perform K-Means Clustering
-Clustering was performed using the k-means algorithm, a partitioning technique that iteratively adjusts cluster centroids to minimise intra-cluster variance (Hartigan & Wong, 1979). Use the kmeans() function to apply the k-means clustering algorithm:
-  - data_scaled: The standardised dataset.
-  - centers = 3: Specifies the number of clusters (k).
-  - nstart = 25: Runs the algorithm with 25 random initialisations for robustness. Assign the resulting cluster labels to a new column (Cluster) in the data_features dataset.
-    
-13.	Cluster Analysis
-Summarise the characteristics of each cluster by calculating the mean of all variables for each cluster using group_by() and summarise(). Save the summary in cluster_summary which Provides the mean values of each feature for every cluster.
-
-14.	Dimensionality Reduction
-Use Principal Component Analysis (PCA) to reduce the dimensions of the dataset for visualisation. Extract the first two principal components and store them in pca_data.
-
-15.	Visualise Clusters with PCA
-Create a scatter plot using ggplot2 to visualise the clusters in a reduced 2D space (PC1 and PC2) with different colours representing different clusters to show the separation of clusters in reduced dimensions.
+9.Model Evaluation
+Accuracy was the main metric to assess how well the model’s predictions matched actual data in the test set.
+Higher accuracy indicates better performance, supporting the model’s use in policy development for digital service adoption.
 
 
