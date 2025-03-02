@@ -5,9 +5,9 @@ This project analyses data from the City of York Council to explore ways to enha
 
 
 ## Research Questions
-RQ1: How do demographic factors influence the probability of using online services?
-RQ2: How accurately can a logistic regression model predict users' probability of online service adoption based on these demographic factors?
-RQ3: Which user group is the primary target that uses online services the most and should be prioritised for promoting online services to maximise adoption rates?
+# RQ1: How do demographic factors influence the probability of using online services?
+# RQ2: How accurately can a logistic regression model predict users' probability of online service adoption based on these demographic factors?
+# RQ3: Which user group is the primary target that uses online services the most and should be prioritised for promoting online services to maximise adoption rates?
 
 
 ## Key Findings
