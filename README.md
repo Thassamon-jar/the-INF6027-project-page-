@@ -1,7 +1,8 @@
 ### The INF6027 Project
 
 ## Overview
-This project analyses data from the City of York Council to explore ways to enhance digital platforms and improve public engagement. By focusing on user age groups, the study aims to develop effective strategies for increasing online service adoption and leveraging user feedback to improve service delivery and engagement.
+The purpose of these research questions is to identify the primary target based on demographic factors to develop data-driven strategies for improving public engagement with online services.
+
 
 
 ## Research Questions
@@ -86,9 +87,7 @@ Used the logit link function to transform probabilities into log-odds.
 
 
 7.Model Specification
-Logistic regression equation:
-Y = \log\left(\frac{p}{1-p}\right) = \beta_0 + \beta_1(\text{Age_Group}) + \beta_2(\text{Gender}) + \beta_3(\text{Marital_Status}) + \epsilon
-This estimates the influence of age group, gender, and marital status on online service access.
+The logistic regression model in this study examines how demographic factors, including age group, gender, and marital status, influence the likelihood of accessing online services. The model estimates the probability that an individual has online access based on these characteristics. Each demographic factor is assigned a coefficient, which reflects the strength and direction of its relationship with online access. By analysing these coefficients, the model provides valuable insights into which groups are more or less likely to engage with online services, helping inform policies to promote digital inclusion.
 
 
 8.Model Parameters
